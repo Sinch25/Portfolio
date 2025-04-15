@@ -11,6 +11,12 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useState } from "react";
 import { toast } from "./ui/use-toast";
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_ANON_KEY
+);
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,16 +24,34 @@ export const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // This is just a placeholder. You'll need to implement actual form submission
-    console.log(formData);
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+      console.error('Error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -57,6 +81,7 @@ export const ContactForm = () => {
               onChange={handleChange}
               className="bg-white/70"
               required
+              disabled={isSubmitting}
             />
           </div>
           <div className="space-y-2">
@@ -68,6 +93,7 @@ export const ContactForm = () => {
               onChange={handleChange}
               className="bg-white/70"
               required
+              disabled={isSubmitting}
             />
           </div>
           <div className="space-y-2">
@@ -78,13 +104,15 @@ export const ContactForm = () => {
               onChange={handleChange}
               className="min-h-[120px] bg-white/70"
               required
+              disabled={isSubmitting}
             />
           </div>
           <Button 
             type="submit" 
             className="w-full bg-vivid-purple hover:bg-light-purple text-white transition-colors"
+            disabled={isSubmitting}
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
       </CardContent>
