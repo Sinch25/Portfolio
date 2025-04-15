@@ -2,10 +2,31 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
+import { Download } from "lucide-react";
+import resumePDF from "/resume.pdf"; // Assuming you'll add a resume PDF to the public folder
 
 const Index = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumePDF;
+    link.download = "Sinchana_N_Resume.pdf";
+    link.click();
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Resume Download and Hero Section Container */}
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <Button 
+          onClick={handleDownloadResume} 
+          variant="outline" 
+          className="bg-soft-purple text-dark-purple hover:bg-light-purple transition-colors"
+        >
+          <Download className="mr-2 h-4 w-4" /> 
+          Download Resume
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
