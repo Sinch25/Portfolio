@@ -45,7 +45,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
+      <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
             Sinchana N
@@ -68,7 +68,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="container mx-auto px-4 py-20 bg-gradient-to-br from-soft-purple to-soft-blue/50">
+      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">About Me</h2>
           <p className="text-lg leading-relaxed mb-6 text-dark-purple/90">
@@ -78,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Let's Connect Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-20 mt-10 bg-section-gradient rounded-2xl">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-dark-purple">Let's Connect</h2>
           <p className="text-lg mb-8 text-dark-purple/90">

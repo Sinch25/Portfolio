@@ -13,11 +13,11 @@ const articles = [
 
 const Articles = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-soft-purple/30 to-soft-blue/20">
       <div className="container mx-auto p-4">
         <div className="mb-4">
           <Link to="/">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="text-dark-purple hover:bg-soft-purple">
               <Home className="mr-2 h-4 w-4" />
               Back to Home
             </Button>
@@ -25,10 +25,10 @@ const Articles = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6">
-          <div className="bg-card rounded-lg shadow-sm">
+          <div className="bg-white/50 backdrop-blur-sm border border-soft-purple rounded-lg shadow-sm">
             <FileTree articles={articles} />
           </div>
-          <div className="min-h-[500px] bg-card rounded-lg p-6">
+          <div className="min-h-[500px] bg-white/50 backdrop-blur-sm border border-soft-purple rounded-lg p-6">
             <Outlet />
           </div>
         </div>
