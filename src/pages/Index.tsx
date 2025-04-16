@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
@@ -110,23 +111,12 @@ const Index = () => {
               </Card>
             ))}
           </div>
-          <div className="mt-8 bg-white/50 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-dark-purple mb-4">Beyond Coding</h3>
-            <p className="text-dark-purple/90 mb-4">
-              Besides coding and development, I love travelling and reading novels. I often play the guitar and find myself deep in thought gazing up at the sky when something pops up in my brain.
-            </p>
-            <div className="flex gap-4 flex-wrap justify-center">
-              {hobbies.map((hobby, index) => (
-                <div key={index} className="flex items-center gap-2 bg-soft-purple/50 px-4 py-2 rounded-full text-dark-purple">
-                  {hobby.icon}
-                  <span>{hobby.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
           
           <div className="mt-8 bg-white/50 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-dark-purple mb-4">Content Writing</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Pen className="w-6 h-6 text-vivid-purple" />
+              <h3 className="text-xl font-semibold text-dark-purple">Content Writing</h3>
+            </div>
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-dark-purple mb-2">Motivation & Interest</h4>
@@ -141,6 +131,24 @@ const Index = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* New separate hobbies section */}
+      <section className="container mx-auto px-4 py-16 mt-10 bg-gradient-to-br from-soft-purple/30 to-light-purple/20 rounded-2xl">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">Hobbies & Interests</h2>
+          <p className="text-dark-purple/90 text-center mb-8">
+            Besides coding and development, I love travelling and reading novels. I often play the guitar and find myself deep in thought gazing up at the sky when something pops up in my brain.
+          </p>
+          <div className="flex flex-wrap justify-center gap-5">
+            {hobbies.map((hobby, index) => (
+              <div key={index} className="flex items-center gap-2 bg-soft-purple/50 px-5 py-3 rounded-full text-dark-purple">
+                {hobby.icon}
+                <span className="font-medium">{hobby.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

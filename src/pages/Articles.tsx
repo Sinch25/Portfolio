@@ -1,5 +1,5 @@
 
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, Navigate, useParams } from 'react-router-dom';
 import { FileTree } from '@/components/FileTree';
 import { Button } from '@/components/ui/button';
 import { Home } from 'lucide-react';
@@ -13,13 +13,27 @@ const articles = [
   },
   { 
     id: '2', 
-    title: 'The Mind-Body Connection',
+    title: 'Existential Crisis Norms',
     date: '15/12/2024',
     tag: 'biology'
+  },
+  { 
+    id: '3', 
+    title: 'Poster',
+    date: '10/01/2025',
+    tag: 'literature'
+  },
+  { 
+    id: '4', 
+    title: 'The Times Newspaper',
+    date: '17/04/1938',
+    tag: 'history'
   }
 ];
 
 const Articles = () => {
+  const { articleId } = useParams();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-soft-purple/30 to-soft-blue/20">
       <div className="container mx-auto p-4">
@@ -37,7 +51,7 @@ const Articles = () => {
             <FileTree articles={articles} />
           </div>
           <div className="min-h-[500px] bg-white/50 backdrop-blur-sm border border-soft-purple rounded-lg p-6">
-            <Outlet />
+            {!articleId ? <Navigate to="/articles/1" replace /> : <Outlet />}
           </div>
         </div>
       </div>

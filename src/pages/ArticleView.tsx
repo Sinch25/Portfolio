@@ -1,3 +1,4 @@
+
 import { useParams } from 'react-router-dom';
 import { ArticleContent } from '@/components/ArticleContent';
 
@@ -43,12 +44,47 @@ An existential crisis can be triggered by various factors like depression, anxie
       "/lovable-uploads/d80d5adc-a2c4-4c81-8c03-953fe96a4ad4.png",
       "/lovable-uploads/d45090e9-31b2-4eb6-8169-49bca278aeb8.png"
     ]
+  },
+  "3": {
+    title: "Poster",
+    date: "10/01/2025",
+    tags: ["literature"],
+    content: "Feeling a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I know why the caged bird sings",
+    images: [
+      "/lovable-uploads/3b271361-6e6f-41bd-a566-73737ac4d1fc.png"
+    ]
+  },
+  "4": {
+    title: "The Times Newspaper",
+    date: "17/04/1938",
+    tags: ["history"],
+    content: `Monday, April 17, 1938
+
+The Times
+
+Disaster on Domingo De Resurrección
+The effects of Easter, a holiday significant of new hope and new life and possible change are still remnant. Workers and children celebrated this festival with their family, moving around happily. The Nationalists patrolling the streets held back from opening gunfire on people celebrating this holiday as per the order received by their leader. "The holiday of rebirth and renewal should not be wasted on taking commoner's lives who believe that revolting against my way of achieving a peaceful nation will do them good", says General Franco. However, after making this statement, the Roman Catholic clergy and faithful who were assembled peacefully celebrating Easter in the Republican zone were attacked and murdered in reaction to the news of the military revolt at noon. Roman Catholic churches, convents, monasteries, seminaries and cemeteries were sacked, burned and desecrated including the people assembled inside them by Chief Walliams and his men. After viewing this terrible massacre, General Franco's words simply were, "Rebirth cannot take place without sacrifices towards a good cause, Chief Walliams was only doing his duty."
+
+French Government Aiding Refugees
+10,000 people fled to France seeking refuge. The country has recently introduced harsher rules for refugees, which allows for asylum seekers from undesirable countries to be detained at interment camps. Among the refugees, many artists stated that they earlier saw 'them' breaking and burning instruments and that 'they' killed artistes. Painters and poets who wanted to showcase their talents had no choices but to leave immediately. The Spanish Republican government still holds their ground, refusing to leave, hoping against hope to reverse the situation.
+
+Scarce seconds
+In the town of San Carlos, when all trucks, carts, soldiers and people were ready to move out, there was a sudden advancement of Fascists. Once the initial coup d' etat plan had failed, the Corpo Truppe Volontarie (CTV) was created to help General Franco. General Mussolini sent over 80,000 Italians to fight in the war, out of which 25,000 troops launched a surprise attack at San Carlos. Before anyone could make a move, within seconds the whole town was bombed. Artillery such as heavy mortars, large-caliber guns and tanks were used. To make sure there were no survivors, fighter planes and jets released heavy damage bombs from above.
+
+Action at River Ebro
+All the refugees, trucks and carts that were hurrying up the slope of the pontoon bridge across the river, successfully made it out alive, escaping to France. Had the Fascists arrived a few minutes earlier, the whole population present there would have been wiped out. However, the Fascists did not leave the place untouched. The pontoon bridge was destroyed and fell into the river. The connecting lands were burning up with flames.`,
+    images: [
+      "/lovable-uploads/dcab7a1b-c890-463a-b454-d98dc4b30c98.png", 
+      "/lovable-uploads/c0574dc9-37a9-4e7e-873c-cdd7271af06a.png",
+      "/lovable-uploads/2feae7dd-4883-4ec9-b8de-5fee723fda8a.png",
+      "/lovable-uploads/de3e8418-0128-40da-870f-7373948cc951.png"
+    ]
   }
 };
 
 const ArticleView = () => {
-  const { articleId } = useParams();
-  const article = articleId ? articles[articleId as keyof typeof articles] : null;
+  const { articleId = "1" } = useParams();
+  const article = articleId ? articles[articleId as keyof typeof articles] : articles["1"];
 
   if (!article) {
     return <div className="p-8">Article not found</div>;

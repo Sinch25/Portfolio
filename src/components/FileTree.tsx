@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { ChevronRight, ChevronDown, FileText } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -18,7 +19,9 @@ export const FileTree = ({ articles }: FileTreeProps) => {
 
   const articlesData = [
     { id: '1', title: 'Neuroscience of Music' },
-    { id: '2', title: 'Existential Crisis Norms' }
+    { id: '2', title: 'Existential Crisis Norms' },
+    { id: '3', title: 'Poster' },
+    { id: '4', title: 'The Times Newspaper' }
   ];
 
   return (
