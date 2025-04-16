@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
-import { Download, GraduationCap, Trophy, Code } from "lucide-react";
+import { Download, Brain, Github, Linkedin } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 const Index = () => {
   const handleDownloadResume = () => {
@@ -10,6 +11,13 @@ const Index = () => {
     link.download = "Sinchana_N_Resume.pdf";
     link.click();
   };
+
+  const skills = [
+    { name: "Web Development", icon: "🌐" },
+    { name: "Poster Making", icon: "🎨" },
+    { name: "Content Writing", icon: "✍️" },
+    { name: "Video Editing", icon: "🎬" }
+  ];
 
   return (
     <div className="min-h-screen bg-hero-gradient">
@@ -65,87 +73,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-soft-blue/30 to-light-purple/20 rounded-2xl">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-center mb-8">
-            <GraduationCap className="w-8 h-8 text-dark-purple mr-3" />
-            <h2 className="text-3xl font-bold text-center text-dark-purple">Education</h2>
-          </div>
-          <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 mb-6">
-            <h3 className="text-xl font-bold text-dark-purple">Bangalore Institute of Technology, Bangalore</h3>
-            <p className="text-dark-purple/80 mt-2">Bachelor of Engineering, Information Science Stream</p>
-            <p className="text-dark-purple/80">September 2024 - Present</p>
-            <p className="text-dark-purple font-semibold mt-2">Current SGPA: 9.15</p>
-            <p className="text-dark-purple/90 mt-2">Relevant Coursework:</p>
-            <ul className="list-disc list-inside text-dark-purple/80 mt-1 ml-4">
-              <li>Data Structures and Algorithms</li>
-              <li>Object-Oriented Programming</li>
-              <li>Database Management Systems</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-soft-purple/30 to-soft-blue/30 rounded-2xl">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center justify-center mb-8">
-            <Trophy className="w-8 h-8 text-dark-purple mr-3" />
-            <h2 className="text-3xl font-bold text-center text-dark-purple">Hackathon Achievements</h2>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-dark-purple">Devhack 6.0, IIT-Dharwad</h3>
-              <p className="text-dark-purple/80 mt-2">Top 30 Selection (100+ Teams)</p>
-            </div>
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-dark-purple">Google Girl Hackathon 2025</h3>
-              <p className="text-dark-purple/80 mt-2">Shortlisted from 50,000+ Applicants</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Preview Section */}
-      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/30 rounded-2xl">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-8">
-            <Code className="w-8 h-8 text-dark-purple mr-3" />
-            <h2 className="text-3xl font-bold text-center text-dark-purple">Featured Projects</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-dark-purple">Weather App</h3>
-              <p className="text-dark-purple/80 mt-2">Real-time weather information application</p>
-              <a href="https://github.com/Sinch25/Web_Dev/tree/main/weather_app" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="text-vivid-purple hover:text-light-purple mt-2 inline-block">
-                View on GitHub →
-              </a>
-            </div>
-            <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6">
-              <h3 className="text-xl font-bold text-dark-purple">Poem Generator</h3>
-              <p className="text-dark-purple/80 mt-2">Creative poetry generation application</p>
-              <a href="https://github.com/Sinch25/Web_Dev/tree/main/Poems_project" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="text-vivid-purple hover:text-light-purple mt-2 inline-block">
-                View on GitHub →
-              </a>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link to="/projects">
-              <Button className="bg-vivid-purple hover:bg-light-purple text-white transition-colors">
-                View All Projects
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">
         <div className="max-w-3xl mx-auto">
@@ -153,6 +80,26 @@ const Index = () => {
           <p className="text-lg leading-relaxed mb-6 text-dark-purple/90">
             I have always loved reading novels from an early age, and I started writing short essays out of interest a bit later. Writing science articles became a passion of mine when I became more interested in science a few years ago. Now, I enjoy reading science facts and publishing them along with writing.
           </p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-soft-blue/30 to-light-purple/20 rounded-2xl">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center justify-center mb-8">
+            <Brain className="w-8 h-8 text-dark-purple mr-3" />
+            <h2 className="text-3xl font-bold text-center text-dark-purple">Skills</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skills.map((skill, index) => (
+              <Card key={index} className="p-6 bg-white/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
+                <div className="flex items-center space-x-4">
+                  <span className="text-4xl">{skill.icon}</span>
+                  <h3 className="text-xl font-semibold text-dark-purple">{skill.name}</h3>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -170,6 +117,28 @@ const Index = () => {
           </Link>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="container mx-auto px-4 py-8 mt-10">
+        <div className="flex justify-center space-x-6">
+          <a
+            href="https://github.com/Sinch25"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-dark-purple hover:text-vivid-purple transition-colors"
+          >
+            <Github className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sinchana-n-8b3416323/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-dark-purple hover:text-vivid-purple transition-colors"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
