@@ -13,10 +13,14 @@ import { useState } from "react";
 import { toast } from "./ui/use-toast";
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+// Check if environment variables are available
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+// Only create the client if both URL and key are available
+const supabase = supabaseUrl && supabaseAnonKey ? 
+  createClient(supabaseUrl, supabaseAnonKey) : 
+  null;
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +35,11 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Check if Supabase is properly initialized
+      if (!supabase) {
+        throw new Error("Supabase client not initialized. Missing environment variables.");
+      }
+
       const { error } = await supabase.functions.invoke('send-contact-email', {
         body: formData
       });
@@ -43,12 +52,12 @@ export const ContactForm = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error('Error:', error);
       toast({
         title: "Error sending message",
-        description: "Please try again later.",
+        description: "Please try again later or contact me directly via email.",
         variant: "destructive",
       });
-      console.error('Error:', error);
     } finally {
       setIsSubmitting(false);
     }
