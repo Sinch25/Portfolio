@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
 import { Download } from "lucide-react";
-import resumePDF from "/resume.pdf";
 
 const Index = () => {
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = resumePDF;
-    link.download = "Sinchana_N_Resume.pdf";
-    link.click();
+    // Since we can't import the PDF directly (it's not available),
+    // we'll use a URL pointing to where the resume would be hosted
+    // In a real-world scenario, you'd host this PDF on a CDN or server
+    
+    // For now, let's show a message that would normally trigger the download
+    alert("In a production environment, this would download the resume PDF.");
+    
+    // If the PDF becomes available later, uncomment this code:
+    // const link = document.createElement('a');
+    // link.href = "/resume.pdf"; // Update this path to wherever the PDF is stored
+    // link.download = "Sinchana_N_Resume.pdf";
+    // link.click();
   };
 
   return (
