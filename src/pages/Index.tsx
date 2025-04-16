@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
-import { Download, Brain, Github, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin, Code, Book, Guitar, Badminton, Puzzle, Globe, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -12,16 +12,38 @@ const Index = () => {
     link.click();
   };
 
-  const skills = [
-    { name: "Web Development", icon: "🌐" },
-    { name: "Poster Making", icon: "🎨" },
-    { name: "Content Writing", icon: "✍️" },
-    { name: "Video Editing", icon: "🎬" }
+  const aboutSections = [
+    {
+      title: "Programming Journey",
+      icon: <Code className="w-6 h-6 text-vivid-purple" />,
+      content: "I stepped foot into the technical world by learning C and Java in school, and that's where it all started - my passion for coding. Out of my interest, I started experimenting with the languages and found myself drawn to DSA. This journey led me to explore competitive programming, where I continue to challenge myself and grow."
+    },
+    {
+      title: "Open Source",
+      icon: <Github className="w-6 h-6 text-vivid-purple" />,
+      content: "I learnt about open-source and contributions a few months ago and I'm a huge fan of it! I loved contributing to Hacktoberfest-24 and GSSoC Ext.-24. Making my GitHub completely green is something I envision soon enough."
+    },
+    {
+      title: "Web Development",
+      icon: <Brain className="w-6 h-6 text-vivid-purple" />,
+      content: "Now, I aim to conquer the domain of web development and although I'm still a rookie front-end specialist, I can assure you that I will meet my goals soon enough."
+    },
+    {
+      title: "IoT & Beyond",
+      icon: <Globe className="w-6 h-6 text-vivid-purple" />,
+      content: "Apart from these, I have worked on a few projects in IoT and embedded systems too, and it has been a great experience so far! Definitely cannot wait to explore more of what the coding world has to offer and upskill myself :)"
+    }
+  ];
+
+  const hobbies = [
+    { icon: <Book className="w-5 h-5" />, label: "Reading" },
+    { icon: <Guitar className="w-5 h-5" />, label: "Guitar" },
+    { icon: <Badminton className="w-5 h-5" />, label: "Badminton" },
+    { icon: <Puzzle className="w-5 h-5" />, label: "Puzzle Solving" },
   ];
 
   return (
     <div className="min-h-screen bg-hero-gradient">
-      {/* Navigation and Resume Download */}
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Button 
           onClick={handleDownloadResume} 
@@ -50,7 +72,6 @@ const Index = () => {
         </nav>
       </div>
 
-      {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
@@ -73,37 +94,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">About Me</h2>
-          <p className="text-lg leading-relaxed mb-6 text-dark-purple/90">
-            I have always loved reading novels from an early age, and I started writing short essays out of interest a bit later. Writing science articles became a passion of mine when I became more interested in science a few years ago. Now, I enjoy reading science facts and publishing them along with writing.
-          </p>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-soft-blue/30 to-light-purple/20 rounded-2xl">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-8">
-            <Brain className="w-8 h-8 text-dark-purple mr-3" />
-            <h2 className="text-3xl font-bold text-center text-dark-purple">Skills</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill, index) => (
-              <Card key={index} className="p-6 bg-white/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
-                <div className="flex items-center space-x-4">
-                  <span className="text-4xl">{skill.icon}</span>
-                  <h3 className="text-xl font-semibold text-dark-purple">{skill.name}</h3>
+          <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">About Me</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {aboutSections.map((section, index) => (
+              <Card key={index} className="p-6 bg-white/50 backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-3">
+                  {section.icon}
+                  <h3 className="text-xl font-semibold text-dark-purple">{section.title}</h3>
                 </div>
+                <p className="text-dark-purple/90">{section.content}</p>
               </Card>
             ))}
           </div>
+          <div className="mt-8 bg-white/50 backdrop-blur-sm rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-dark-purple mb-4">Beyond Coding</h3>
+            <p className="text-dark-purple/90 mb-4">
+              Besides coding and development, I love travelling and reading novels. I often play the guitar and find myself deep in thought gazing up at the sky when something pops up in my brain.
+            </p>
+            <div className="flex gap-4 flex-wrap justify-center">
+              {hobbies.map((hobby, index) => (
+                <div key={index} className="flex items-center gap-2 bg-soft-purple/50 px-4 py-2 rounded-full text-dark-purple">
+                  {hobby.icon}
+                  <span>{hobby.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Let's Connect Section */}
       <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-soft-blue/30 to-light-purple/20 rounded-2xl">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-dark-purple">Let's Connect</h2>
@@ -118,7 +139,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-10">
         <div className="flex justify-center space-x-6">
           <a

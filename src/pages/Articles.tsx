@@ -5,10 +5,18 @@ import { Button } from '@/components/ui/button';
 import { Home } from 'lucide-react';
 
 const articles = [
-  { id: '1', title: 'The Future of Quantum Computing' },
-  { id: '2', title: 'Understanding Dark Matter' },
-  { id: '3', title: 'Exploring Neural Networks' },
-  // Add more articles as needed
+  { 
+    id: '1', 
+    title: 'Neuroscience of Music',
+    date: '28/11/2024',
+    tag: 'biology'
+  },
+  { 
+    id: '2', 
+    title: 'The Mind-Body Connection',
+    date: '15/12/2024',
+    tag: 'biology'
+  }
 ];
 
 const Articles = () => {
