@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { ArticleContent } from '@/components/ArticleContent';
 
@@ -29,6 +28,20 @@ Our lives are all shaped by music and always will be.`,
     images: [
       "/lovable-uploads/8702bde2-d029-47be-aa97-f265d0eebb33.png",
       "/lovable-uploads/13ee81a7-306e-4026-bc3a-4a9d85a62de9.png"
+    ]
+  },
+  "2": {
+    title: "Existential Crisis Norms",
+    date: "15/12/2024",
+    tags: ["biology"],
+    content: `"What am I doing here?" "What difference does my existence make in this world?" "Why am I the way I am?" "What is my purpose?" The list of questions goes on and on. Ever wondered why sometimes thoughts like these randomly pop up in your brain just from nowhere? These thoughts are very much common among people all around the world and signify an existential crisis.
+
+An existential crisis is a period of questioning and contemplation about the meaning of life and one's own existence. The person might feel disconnected from the world and experiences feelings of inner emptiness and self-doubt. This can trigger anxiety, stress and depression. People might feel like they just don't fit in anywhere and they just find it difficult to go about their daily lives and work.
+
+An existential crisis can be triggered by various factors like depression, anxiety, stressful life events, traumatic experiences, etc. When you are going through something similar to this, don't panic, it is normal. Talk to your friends, family or anybody who you trust. Seek professional help if required. Practise positive thinking and mindfulness. Your thoughts can make you strive better or leave you in distress. So always try to stay optimistic. Everything might seem overwhelming and unattainable for a while, but you will get through it. Trust me, you're gonna make it.`,
+    images: [
+      "/lovable-uploads/d80d5adc-a2c4-4c81-8c03-953fe96a4ad4.png",
+      "/lovable-uploads/d45090e9-31b2-4eb6-8169-49bca278aeb8.png"
     ]
   }
 };

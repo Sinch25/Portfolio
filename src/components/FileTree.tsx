@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ChevronRight, ChevronDown, FileText } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -17,6 +16,11 @@ export const FileTree = ({ articles }: FileTreeProps) => {
   const [isOpen, setIsOpen] = useState(true);
   const { articleId } = useParams();
 
+  const articlesData = [
+    { id: '1', title: 'Neuroscience of Music' },
+    { id: '2', title: 'Existential Crisis Norms' }
+  ];
+
   return (
     <div className="p-4">
       <div 
@@ -29,7 +33,7 @@ export const FileTree = ({ articles }: FileTreeProps) => {
       
       {isOpen && (
         <div className="ml-4 space-y-1">
-          {articles.map((article) => (
+          {articlesData.map((article) => (
             <Link 
               key={article.id}
               to={`/articles/${article.id}`}

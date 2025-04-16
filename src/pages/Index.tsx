@@ -1,8 +1,7 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
-import { Download, Github, Linkedin, Code, Book, Guitar, Activity, Puzzle, Globe, Brain } from "lucide-react";
+import { Download, Github, Linkedin, Code, Book, Guitar, Activity, Puzzle, Globe, Brain, GamepadIcon, Pen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -39,8 +38,10 @@ const Index = () => {
   const hobbies = [
     { icon: <Book className="w-5 h-5" />, label: "Reading" },
     { icon: <Guitar className="w-5 h-5" />, label: "Guitar" },
-    { icon: <Activity className="w-5 h-5" />, label: "Sports" },
-    { icon: <Puzzle className="w-5 h-5" />, label: "Puzzle Solving" },
+    { icon: <Activity className="w-5 h-5" />, label: "Badminton" },
+    { icon: <Puzzle className="w-5 h-5" />, label: "Rubix Cube" },
+    { icon: <Brain className="w-5 h-5" />, label: "Sudoku" },
+    { icon: <GamepadIcon className="w-5 h-5" />, label: "Gaming" }
   ];
 
   return (
@@ -121,6 +122,24 @@ const Index = () => {
                   <span>{hobby.label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+          
+          <div className="mt-8 bg-white/50 backdrop-blur-sm rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-dark-purple mb-4">Content Writing</h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-medium text-dark-purple mb-2">Motivation & Interest</h4>
+                <p className="text-dark-purple/90">
+                  I have always loved reading novels from an early age, and I started writing short essays out of interest. Writing science articles became a passion when I became more interested in science a few years ago. Now, I enjoy reading science facts and publishing them along with writing.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium text-dark-purple mb-2">Experience</h4>
+                <p className="text-dark-purple/90">
+                  I have written several science articles for school and college magazines, mainly related to biology. Additionally, I have worked on scripts for the hosting team, focusing on audience engagement and peer perspectives. For technical writing, I am currently upskilling myself in certain domains to publish tech articles in the near future.
+                </p>
+              </div>
             </div>
           </div>
         </div>

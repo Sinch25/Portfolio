@@ -17,8 +17,23 @@ const Projects = () => {
       title: "Blog on Books",
       description: "A responsive blog platform dedicated to book reviews and literary discussions. Built with a clean, modern design that prioritizes readability and user experience.",
       technologies: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://blogonbooks.netlify.app/",
       githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/Blog_on_Books"
     },
+    {
+      title: "Joke Generator",
+      description: "A fun web application that generates random jokes using an API. Features a clean interface and responsive design for entertainment on any device.",
+      technologies: ["HTML", "CSS", "JavaScript", "Joke API"],
+      demoLink: "https://jokegeneratorsinch.netlify.app/",
+      githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/Joke_generator"
+    },
+    {
+      title: "Poem Generator",
+      description: "An interactive web application that generates beautiful poems. Users can generate random poems with different themes and styles.",
+      technologies: ["HTML", "CSS", "JavaScript", "Poetry API"],
+      demoLink: "https://poemgeneratorsinch.netlify.app/",
+      githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/Poems_project"
+    }
   ];
 
   return (
