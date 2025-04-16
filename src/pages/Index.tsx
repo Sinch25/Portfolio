@@ -1,7 +1,8 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
-import { Download, Github, Linkedin, Code, Book, Guitar, Badminton, Puzzle, Globe, Brain } from "lucide-react";
+import { Download, Github, Linkedin, Code, Book, Guitar, Activity, Puzzle, Globe, Brain } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
@@ -38,7 +39,7 @@ const Index = () => {
   const hobbies = [
     { icon: <Book className="w-5 h-5" />, label: "Reading" },
     { icon: <Guitar className="w-5 h-5" />, label: "Guitar" },
-    { icon: <Badminton className="w-5 h-5" />, label: "Badminton" },
+    { icon: <Activity className="w-5 h-5" />, label: "Sports" },
     { icon: <Puzzle className="w-5 h-5" />, label: "Puzzle Solving" },
   ];
 
