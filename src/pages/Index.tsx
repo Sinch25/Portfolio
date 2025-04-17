@@ -1,9 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
 import { Download, Github, Linkedin, Code, Book, Guitar, Activity, Puzzle, Globe, Brain, GamepadIcon, Pen } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => {
   const handleDownloadResume = () => {
@@ -47,6 +47,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-hero-gradient">
+      <BackToTop />
+      
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Button 
           onClick={handleDownloadResume} 
@@ -76,28 +78,37 @@ const Index = () => {
       </div>
 
       <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
-            Sinchana N
-          </h1>
-          <div className="text-xl md:text-2xl mb-8 text-dark-purple">
-            <TypewriterEffect
-              texts={[
-                "Front end developer",
-                "Content writer",
-                "Open source enthusiast"
-              ]}
+        <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="flex-1">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
+              Sinchana N
+            </h1>
+            <div className="text-xl md:text-2xl mb-8 text-dark-purple">
+              <TypewriterEffect
+                texts={[
+                  "Front end developer",
+                  "Content writer",
+                  "Open source enthusiast"
+                ]}
+              />
+            </div>
+            <Link to="/articles">
+              <Button size="lg" className="bg-vivid-purple hover:bg-light-purple text-white transition-colors">
+                View My Work
+              </Button>
+            </Link>
+          </div>
+          <div className="flex-1 mt-8 md:mt-0">
+            <img 
+              src="/lovable-uploads/f39e637c-88df-492f-8e2f-2dfc170fbedb.png" 
+              alt="Profile with wings" 
+              className="max-w-full h-auto rounded-lg shadow-xl mx-auto"
             />
           </div>
-          <Link to="/articles">
-            <Button size="lg" className="bg-vivid-purple hover:bg-light-purple text-white transition-colors">
-              View My Work
-            </Button>
-          </Link>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-20 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">
+      <section className="container mx-auto px-4 py-16 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">About Me</h2>
           <div className="grid gap-6 md:grid-cols-2">
@@ -135,7 +146,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* New separate hobbies section */}
       <section className="container mx-auto px-4 py-16 mt-10 bg-gradient-to-br from-soft-purple/30 to-light-purple/20 rounded-2xl">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-dark-purple">Hobbies & Interests</h2>

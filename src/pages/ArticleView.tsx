@@ -1,3 +1,4 @@
+
 import { useParams } from 'react-router-dom';
 import { ArticleContent } from '@/components/ArticleContent';
 
@@ -50,7 +51,7 @@ An existential crisis can be triggered by various factors like depression, anxie
     tags: ["literature"],
     content: `Felt a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I know why the caged bird sings`,
     images: [
-      "/lovable-uploads/3b271361-6e6f-41bd-a566-73737ac4d1fc.png"
+      "/lovable-uploads/dad8a8f8-06bc-4279-8789-a66a3b07ffee.png"
     ]
   },
   "4": {
@@ -75,7 +76,7 @@ The constant threat from above — enemy planes flying in squadrons, the drone o
 
 And in sharp contrast, flickers of Easter celebrations, clung to by civilians as a fragile symbol of hope and resilience amidst devastation.`,
     images: [
-      "/lovable-uploads/dcab7a1b-c890-463a-b454-d98dc4b30c98.png"
+      "/lovable-uploads/41b15fa6-659a-4a97-908b-bba7f72359f0.png"
     ]
   }
 };

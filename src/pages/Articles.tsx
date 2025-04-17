@@ -25,7 +25,7 @@ const articles = [
   },
   { 
     id: '4', 
-    title: 'The Times Newspaper',
+    title: 'The Times Front Page',
     date: '03/07/2021',
     tag: 'history'
   }
