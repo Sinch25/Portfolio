@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router-dom';
 import { ArticleContent } from '@/components/ArticleContent';
 
@@ -47,37 +46,36 @@ An existential crisis can be triggered by various factors like depression, anxie
   },
   "3": {
     title: "Poster",
-    date: "10/01/2025",
+    date: "10/09/2021",
     tags: ["literature"],
-    content: "Feeling a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I know why the caged bird sings",
+    content: `Felt a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I know why the caged bird sings`,
     images: [
       "/lovable-uploads/3b271361-6e6f-41bd-a566-73737ac4d1fc.png"
     ]
   },
   "4": {
-    title: "The Times Newspaper",
-    date: "17/04/1938",
+    title: "The Times Front Page",
+    date: "03/07/2021",
     tags: ["history"],
-    content: `Monday, April 17, 1938
+    content: `Reporting from the Frontlines – Spain, 17th April 1938
 
-The Times
+For this article, I stepped into the shoes of a 1930s-era war correspondent, transporting myself and my team back to Easter Sunday, 17th April 1938, at the height of the Spanish Civil War. My goal was to recreate the front page of a newspaper from that era, dated Monday, 18 April 1938, capturing the raw emotion, chaos, and humanity of the battlefield in real time — as if it had just happened.
 
-Disaster on Domingo De Resurrección
-The effects of Easter, a holiday significant of new hope and new life and possible change are still remnant. Workers and children celebrated this festival with their family, moving around happily. The Nationalists patrolling the streets held back from opening gunfire on people celebrating this holiday as per the order received by their leader. "The holiday of rebirth and renewal should not be wasted on taking commoner's lives who believe that revolting against my way of achieving a peaceful nation will do them good", says General Franco. However, after making this statement, the Roman Catholic clergy and faithful who were assembled peacefully celebrating Easter in the Republican zone were attacked and murdered in reaction to the news of the military revolt at noon. Roman Catholic churches, convents, monasteries, seminaries and cemeteries were sacked, burned and desecrated including the people assembled inside them by Chief Walliams and his men. After viewing this terrible massacre, General Franco's words simply were, "Rebirth cannot take place without sacrifices towards a good cause, Chief Walliams was only doing his duty."
+In this edition, I aimed to bring first-hand coverage of the most pressing events that defined the day:
 
-French Government Aiding Refugees
-10,000 people fled to France seeking refuge. The country has recently introduced harsher rules for refugees, which allows for asylum seekers from undesirable countries to be detained at interment camps. Among the refugees, many artists stated that they earlier saw 'them' breaking and burning instruments and that 'they' killed artistes. Painters and poets who wanted to showcase their talents had no choices but to leave immediately. The Spanish Republican government still holds their ground, refusing to leave, hoping against hope to reverse the situation.
+The fate of countless refugees, displaced and desperate, seeking shelter amidst relentless conflict.
 
-Scarce seconds
-In the town of San Carlos, when all trucks, carts, soldiers and people were ready to move out, there was a sudden advancement of Fascists. Once the initial coup d' etat plan had failed, the Corpo Truppe Volontarie (CTV) was created to help General Franco. General Mussolini sent over 80,000 Italians to fight in the war, out of which 25,000 troops launched a surprise attack at San Carlos. Before anyone could make a move, within seconds the whole town was bombed. Artillery such as heavy mortars, large-caliber guns and tanks were used. To make sure there were no survivors, fighter planes and jets released heavy damage bombs from above.
+A tense and bloody skirmish at the pontoon bridge on the River Ebro, a strategic choke point that witnessed fierce resistance and loss.
 
-Action at River Ebro
-All the refugees, trucks and carts that were hurrying up the slope of the pontoon bridge across the river, successfully made it out alive, escaping to France. Had the Fascists arrived a few minutes earlier, the whole population present there would have been wiped out. However, the Fascists did not leave the place untouched. The pontoon bridge was destroyed and fell into the river. The connecting lands were burning up with flames.`,
+The brutal artillery shelling of San Carlos, shaking the very ground and lives of those caught within its blast radius.
+
+The steady and ominous advance of Fascist forces, changing the tide of war as fear spread through Republican strongholds.
+
+The constant threat from above — enemy planes flying in squadrons, the drone of engines and whine of sirens a chilling soundtrack to war.
+
+And in sharp contrast, flickers of Easter celebrations, clung to by civilians as a fragile symbol of hope and resilience amidst devastation.`,
     images: [
-      "/lovable-uploads/dcab7a1b-c890-463a-b454-d98dc4b30c98.png", 
-      "/lovable-uploads/c0574dc9-37a9-4e7e-873c-cdd7271af06a.png",
-      "/lovable-uploads/2feae7dd-4883-4ec9-b8de-5fee723fda8a.png",
-      "/lovable-uploads/de3e8418-0128-40da-870f-7373948cc951.png"
+      "/lovable-uploads/dcab7a1b-c890-463a-b454-d98dc4b30c98.png"
     ]
   }
 };

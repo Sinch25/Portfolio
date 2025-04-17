@@ -20,13 +20,13 @@ const articles = [
   { 
     id: '3', 
     title: 'Poster',
-    date: '10/01/2025',
+    date: '10/09/2021',
     tag: 'literature'
   },
   { 
     id: '4', 
     title: 'The Times Newspaper',
-    date: '17/04/1938',
+    date: '03/07/2021',
     tag: 'history'
   }
 ];
