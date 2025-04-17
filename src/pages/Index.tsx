@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import TypewriterEffect from "@/components/TypewriterEffect";
@@ -59,7 +60,7 @@ const Index = () => {
     <div className="min-h-screen bg-hero-gradient">
       <BackToTop />
       
-      <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-[#D4E3FD] backdrop-blur-sm rounded-lg">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-[#D6BCFA] backdrop-blur-sm rounded-lg">
         <Button 
           onClick={handleDownloadResume} 
           variant="outline" 
@@ -87,7 +88,7 @@ const Index = () => {
         </nav>
       </div>
 
-      <section className="container mx-auto px-4 py-20 md:py-32 rounded-2xl backdrop-blur-sm mt-6 relative overflow-hidden">
+      <section className="container mx-auto px-4 py-20 md:py-32 mt-6 relative overflow-hidden">
         <BirdsBackground>
           <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
             <div className="flex-1">
