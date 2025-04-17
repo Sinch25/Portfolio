@@ -16,7 +16,7 @@ const Projects = () => {
       description:
         "A responsive weather application built with HTML, CSS, and JavaScript that provides real-time weather information using the OpenWeatherMap API. Features include current weather conditions, temperature, humidity, and wind speed for any city worldwide.",
       technologies: ["HTML", "CSS", "JavaScript", "OpenWeatherMap API"],
-      demoLink: "https://weatherappsinch.netlify.app/",
+      demoLink: "https://simpleweatherrapp.netlify.app/",
       githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/weather_app",
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
       description:
         "A fun web application that generates random jokes using an API. Features a clean interface and responsive design for entertainment on any device.",
       technologies: ["HTML", "CSS", "JavaScript", "Joke API"],
-      demoLink: "https://jokegeneratorsinch.netlify.app/",
+      demoLink: "https://pungenerator.netlify.app/",
       githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/Joke_generator",
     },
     {
@@ -40,7 +40,7 @@ const Projects = () => {
       description:
         "An interactive web application that generates beautiful poems. Users can generate random poems with different themes and styles.",
       technologies: ["HTML", "CSS", "JavaScript", "Poetry API"],
-      demoLink: "https://poemgeneratorsinch.netlify.app/",
+      demoLink: "https://aipoemsproject.netlify.app/",
       githubLink: "https://github.com/Sinch25/Web_Dev/tree/main/Poems_project",
     },
   ];
