@@ -4,6 +4,7 @@ import TypewriterEffect from "@/components/TypewriterEffect";
 import { Download, Github, Linkedin, Code, Book, Guitar, Activity, Puzzle, Globe, Brain, GamepadIcon, Pen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { BackToTop } from "@/components/BackToTop";
+import { BirdsBackground } from "@/components/BirdsBackground";
 
 const Index = () => {
   const handleDownloadResume = () => {
@@ -58,7 +59,7 @@ const Index = () => {
     <div className="min-h-screen bg-hero-gradient">
       <BackToTop />
       
-      <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-soft-purple/50 backdrop-blur-sm rounded-lg">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-[#D4E3FD] backdrop-blur-sm rounded-lg">
         <Button 
           onClick={handleDownloadResume} 
           variant="outline" 
@@ -86,41 +87,37 @@ const Index = () => {
         </nav>
       </div>
 
-      <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm mt-6 relative overflow-hidden">
-        {devIcons.map((item, index) => (
-          <div key={index} className="absolute text-dark-purple" style={item.style}>
-            {item.icon}
-          </div>
-        ))}
-        
-        <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
-              Sinchana N
-            </h1>
-            <div className="text-xl md:text-2xl mb-8 text-dark-purple">
-              <TypewriterEffect
-                texts={[
-                  "Front end developer",
-                  "Content writer",
-                  "Open source enthusiast"
-                ]}
+      <section className="container mx-auto px-4 py-20 md:py-32 rounded-2xl backdrop-blur-sm mt-6 relative overflow-hidden">
+        <BirdsBackground>
+          <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
+            <div className="flex-1">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
+                Sinchana N
+              </h1>
+              <div className="text-xl md:text-2xl mb-8 text-dark-purple">
+                <TypewriterEffect
+                  texts={[
+                    "Front end developer",
+                    "Content writer",
+                    "Open source enthusiast"
+                  ]}
+                />
+              </div>
+              <Link to="/articles">
+                <Button size="lg" className="bg-vivid-purple hover:bg-light-purple text-white transition-colors">
+                  View My Work
+                </Button>
+              </Link>
+            </div>
+            <div className="flex-1 mt-8 md:mt-0">
+              <img 
+                src="/lovable-uploads/f39e637c-88df-492f-8e2f-2dfc170fbedb.png" 
+                alt="Profile with wings" 
+                className="max-w-full h-auto rounded-lg shadow-xl mx-auto"
               />
             </div>
-            <Link to="/articles">
-              <Button size="lg" className="bg-vivid-purple hover:bg-light-purple text-white transition-colors">
-                View My Work
-              </Button>
-            </Link>
           </div>
-          <div className="flex-1 mt-8 md:mt-0">
-            <img 
-              src="/lovable-uploads/f39e637c-88df-492f-8e2f-2dfc170fbedb.png" 
-              alt="Profile with wings" 
-              className="max-w-full h-auto rounded-lg shadow-xl mx-auto"
-            />
-          </div>
-        </div>
+        </BirdsBackground>
       </section>
 
       <section className="container mx-auto px-4 py-16 mt-10 bg-gradient-to-br from-light-purple/20 to-soft-blue/20 rounded-2xl">

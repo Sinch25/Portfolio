@@ -31,7 +31,7 @@ export const BackToTop = () => {
       {isVisible && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-16 right-1/2 translate-x-1/2 z-50 p-3 rounded-full bg-vivid-purple hover:bg-light-purple text-white shadow-lg transition-all"
+          className="fixed bottom-16 right-4 z-50 p-3 rounded-full bg-vivid-purple hover:bg-light-purple text-white shadow-lg transition-all"
           aria-label="Back to top"
           size="icon"
         >
