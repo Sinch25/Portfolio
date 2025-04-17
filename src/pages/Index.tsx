@@ -45,11 +45,20 @@ const Index = () => {
     { icon: <GamepadIcon className="w-5 h-5" />, label: "Gaming" }
   ];
 
+  const devIcons = [
+    { icon: <Code className="w-8 h-8 opacity-15" />, style: { top: '15%', left: '10%', transform: 'rotate(15deg)' } },
+    { icon: <Brain className="w-10 h-10 opacity-15" />, style: { top: '30%', left: '25%', transform: 'rotate(-10deg)' } },
+    { icon: <Globe className="w-9 h-9 opacity-15" />, style: { top: '60%', left: '15%', transform: 'rotate(25deg)' } },
+    { icon: <Github className="w-7 h-7 opacity-15" />, style: { top: '25%', right: '8%', transform: 'rotate(-5deg)' } },
+    { icon: <Pen className="w-6 h-6 opacity-15" />, style: { top: '50%', right: '20%', transform: 'rotate(10deg)' } },
+    { icon: <Puzzle className="w-8 h-8 opacity-15" />, style: { top: '70%', right: '10%', transform: 'rotate(-15deg)' } },
+  ];
+
   return (
     <div className="min-h-screen bg-hero-gradient">
       <BackToTop />
       
-      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center bg-soft-purple/50 backdrop-blur-sm rounded-lg">
         <Button 
           onClick={handleDownloadResume} 
           variant="outline" 
@@ -77,8 +86,14 @@ const Index = () => {
         </nav>
       </div>
 
-      <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8">
+      <section className="container mx-auto px-4 py-20 md:py-32 bg-gradient-to-br from-soft-purple/50 to-soft-blue/30 rounded-2xl backdrop-blur-sm mt-6 relative overflow-hidden">
+        {devIcons.map((item, index) => (
+          <div key={index} className="absolute text-dark-purple" style={item.style}>
+            {item.icon}
+          </div>
+        ))}
+        
+        <div className="max-w-4xl mx-auto text-center flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
           <div className="flex-1">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-dark-purple bg-gradient-to-r from-vivid-purple to-ocean-blue bg-clip-text text-transparent">
               Sinchana N
