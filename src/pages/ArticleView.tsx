@@ -49,7 +49,7 @@ Well, this was a pretty brief explanation about hackathons, but yes, whenever so
   "2": {
     title: "Existential Crisis Norms",
     date: "15/12/2024",
-    tags: ["biology"],
+    tags: ["psychology"],
     content: `"What am I doing here?" "What difference does my existence make in this world?" "Why am I the way I am?" "What is my purpose?" The list of questions goes on and on. Ever wondered why sometimes thoughts like these randomly pop up in your brain just from nowhere? These thoughts are very much common among people all around the world and signify an existential crisis.
 
 An existential crisis is a period of questioning and contemplation about the meaning of life and one's own existence. The person might feel disconnected from the world and experiences feelings of inner emptiness and self-doubt. This can trigger anxiety, stress and depression. People might feel like they just don't fit in anywhere and they just find it difficult to go about their daily lives and work.

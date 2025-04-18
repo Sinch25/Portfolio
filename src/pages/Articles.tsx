@@ -14,7 +14,7 @@ const articles = [
     id: "2",
     title: "Existential Crisis Norms",
     date: "15/12/2024",
-    tag: "biology",
+    tag: "psychology",
   },
   {
     id: "3",
