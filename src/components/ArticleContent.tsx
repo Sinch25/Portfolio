@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,9 +12,17 @@ interface ArticleContentProps {
   images?: string[];
 }
 
-export const ArticleContent = ({ title, date, tags, content, images }: ArticleContentProps) => {
+export const ArticleContent = ({
+  title,
+  date,
+  tags,
+  content,
+  images,
+}: ArticleContentProps) => {
   // Check if this is the poster or newspaper article (articles 3 or 4)
-  const isFullWidthImage = title === "Poster" || title === "The Times Front Page";
+  const isFullWidthImage =
+    title === "One with open skies, the other behind bars" ||
+    title === "The Times Front Page";
   const [imageOpen, setImageOpen] = useState<string | null>(null);
 
   return (
@@ -25,7 +32,7 @@ export const ArticleContent = ({ title, date, tags, content, images }: ArticleCo
         <span className="text-dark-purple/70">{date}</span>
         <div className="flex gap-2">
           {tags.map((tag, index) => (
-            <span 
+            <span
               key={index}
               className="px-3 py-1 bg-soft-purple/50 text-dark-purple rounded-full text-sm"
             >
@@ -35,23 +42,33 @@ export const ArticleContent = ({ title, date, tags, content, images }: ArticleCo
         </div>
       </div>
       <div className="prose max-w-none">
-        {content.split('\n\n').map((paragraph, index) => (
+        {content.split("\n\n").map((paragraph, index) => (
           <p key={index} className="text-dark-purple/90 mb-4">
             {paragraph}
           </p>
         ))}
       </div>
       {images && images.length > 0 && (
-        <div className={isFullWidthImage ? "mt-6" : "grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"}>
+        <div
+          className={
+            isFullWidthImage
+              ? "mt-6"
+              : "grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"
+          }
+        >
           {images.map((image, index) => (
             <div key={index} className="flex flex-col items-center">
-              <img 
+              <img
                 src={image}
                 alt={`Article illustration ${index + 1}`}
-                className={isFullWidthImage ? "rounded-lg shadow-md w-full h-auto max-h-[70vh] object-contain mx-auto" : "rounded-lg shadow-md w-full"}
+                className={
+                  isFullWidthImage
+                    ? "rounded-lg shadow-md w-full h-auto max-h-[70vh] object-contain mx-auto"
+                    : "rounded-lg shadow-md w-full"
+                }
               />
               {isFullWidthImage && (
-                <Button 
+                <Button
                   variant="outline"
                   className="mt-4 bg-soft-purple text-dark-purple hover:bg-light-purple transition-colors"
                   onClick={() => setImageOpen(image)}
@@ -72,7 +89,7 @@ export const ArticleContent = ({ title, date, tags, content, images }: ArticleCo
             <X className="h-4 w-4 text-white" />
           </DialogClose>
           {imageOpen && (
-            <img 
+            <img
               src={imageOpen}
               alt="Fullscreen view"
               className="w-full h-auto object-contain"

@@ -3,6 +3,64 @@ import { ArticleContent } from "@/components/ArticleContent";
 
 const articles = {
   "1": {
+    title: "Simplifying Hackathons",
+    date: "18/04/2025",
+    tags: ["technology"],
+    content: `
+Have you been to any hackathons? If not, then you definitely must try your hand at them.
+
+Hackathons are a great way to showcase your coding and creative skills. They promote collaboration and patience. They can sound pretty intimidating, but the best part — you can participate without having to be a pro developer or a coding genius, which is what most likely happens in hackathons today.
+
+I had been to a hackathon in IIT-Dharwad in February 2025, and I was pretty excited as that was my first. I had been looking up many hackathons and gathering various skills to take part in them. Every time my mother heard the word "hackathon", she couldn't quite place what we were trying to 'hack' exactly. So, I'm writing this article to break down what a hackathon is, generally, and how it works. Which brings us to the question of this article:
+
+What are hackathons?
+
+The word Hackathon is so commonly used in today’s technological sphere that no one realises it was coined by mixing two words — hack and marathon, where "hack" is used in the sense of exploratory programming.
+Basically, a hackathon is a skill-based competitive event or festival where participants are asked to solve a problem and build solutions in a relatively short time frame. It typically involves developing software, creating an application, or brainstorming ideas to solve the problem.
+
+Hackathons are often hosted by companies, schools, and organisations as a way to challenge participants to think creatively, inspire innovation, and generate project submissions.
+
+The event can be 24 hours long, 36 hours long, or even a week!
+
+During a hackathon, participants form teams and work on projects using programming languages and other tools to create mobile apps, websites, or other software solutions. The goal is usually to come up with a working prototype or demo by the end of the event.
+
+At the end of a hackathon, project entries are reviewed by a panel of judges and the winner is awarded a prize.
+
+History
+
+ The origin of the modern-day hackathon, also known as a hack day or hackfest, goes back to 1999 when OpenBSD organised a cryptographic development event in Alberta on June 4. The name “hackathon” was coined by Niels Provos from OpenBSD.
+Around the same time, Sun Microsystems organised the JavaOne Conference, where attendees were challenged to write a Java program for the new Palm V personal digital assistant (PDA). Soon enough, there were plenty of hackathon events being held per year by other organisations, mostly universities.
+
+Join the Hackathon Craze: What’s In It for You?
+
+Too often, we create what we are told to create, not what we want to create; therefore, by joining hackathons, you get the freedom to pitch your original ideas and creations.
+To all the under-appreciated designers, you get to bring a whole new perspective, a whole new colour to the game. Dazzling visuals, user-centric designs, and an uncanny knack for creating a killer user experience.
+Other than flaunting your tech skills, you get to network, meet new people, learn what it takes to be a team player, and learn from the whole experience as well.
+The biggest benefits are having fun while experimenting and boosting your CV while you're at it!
+
+Conclusion
+
+Don't be scared to put yourself out there and participate in hackathons. Give it a shot and take back as much as you can from the experience :)
+Well, this was a pretty brief explanation about hackathons, but yes, whenever someone asks what exactly you will be 'hacking' the next weekend, just show them this article!
+`,
+    images: ["/lovable-uploads/hack.jpg"],
+  },
+
+  "2": {
+    title: "Existential Crisis Norms",
+    date: "15/12/2024",
+    tags: ["biology"],
+    content: `"What am I doing here?" "What difference does my existence make in this world?" "Why am I the way I am?" "What is my purpose?" The list of questions goes on and on. Ever wondered why sometimes thoughts like these randomly pop up in your brain just from nowhere? These thoughts are very much common among people all around the world and signify an existential crisis.
+
+An existential crisis is a period of questioning and contemplation about the meaning of life and one's own existence. The person might feel disconnected from the world and experiences feelings of inner emptiness and self-doubt. This can trigger anxiety, stress and depression. People might feel like they just don't fit in anywhere and they just find it difficult to go about their daily lives and work.
+
+An existential crisis can be triggered by various factors like depression, anxiety, stressful life events, traumatic experiences, etc. When you are going through something similar to this, don't panic, it is normal. Talk to your friends, family or anybody who you trust. Seek professional help if required. Practise positive thinking and mindfulness. Your thoughts can make you strive better or leave you in distress. So always try to stay optimistic. Everything might seem overwhelming and unattainable for a while, but you will get through it. Trust me, you're gonna make it.`,
+    images: [
+      "/lovable-uploads/d80d5adc-a2c4-4c81-8c03-953fe96a4ad4.png",
+      "/lovable-uploads/d45090e9-31b2-4eb6-8169-49bca278aeb8.png",
+    ],
+  },
+  "3": {
     title: "Neuroscience of Music",
     date: "28/11/2024",
     tags: ["biology"],
@@ -38,28 +96,14 @@ Our lives are all shaped by music and always will be.`,
       "/lovable-uploads/13ee81a7-306e-4026-bc3a-4a9d85a62de9.png",
     ],
   },
-  "2": {
-    title: "Existential Crisis Norms",
-    date: "15/12/2024",
-    tags: ["biology"],
-    content: `"What am I doing here?" "What difference does my existence make in this world?" "Why am I the way I am?" "What is my purpose?" The list of questions goes on and on. Ever wondered why sometimes thoughts like these randomly pop up in your brain just from nowhere? These thoughts are very much common among people all around the world and signify an existential crisis.
-
-An existential crisis is a period of questioning and contemplation about the meaning of life and one's own existence. The person might feel disconnected from the world and experiences feelings of inner emptiness and self-doubt. This can trigger anxiety, stress and depression. People might feel like they just don't fit in anywhere and they just find it difficult to go about their daily lives and work.
-
-An existential crisis can be triggered by various factors like depression, anxiety, stressful life events, traumatic experiences, etc. When you are going through something similar to this, don't panic, it is normal. Talk to your friends, family or anybody who you trust. Seek professional help if required. Practise positive thinking and mindfulness. Your thoughts can make you strive better or leave you in distress. So always try to stay optimistic. Everything might seem overwhelming and unattainable for a while, but you will get through it. Trust me, you're gonna make it.`,
-    images: [
-      "/lovable-uploads/d80d5adc-a2c4-4c81-8c03-953fe96a4ad4.png",
-      "/lovable-uploads/d45090e9-31b2-4eb6-8169-49bca278aeb8.png",
-    ],
-  },
-  "3": {
-    title: "Poster",
+  "4": {
+    title: "One with open skies, the other behind bars",
     date: "10/09/2021",
     tags: ["literature"],
-    content: `Felt a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I know why the caged bird sings`,
+    content: `Felt a little free spirited and went for a poster here, instead of an article. This poster is a reference to Maya Angelou's poem: I Know Why The Caged Bird Sings`,
     images: ["/lovable-uploads/dad8a8f8-06bc-4279-8789-a66a3b07ffee.png"],
   },
-  "4": {
+  "5": {
     title: "The Times Front Page",
     date: "03/07/2021",
     tags: ["history"],

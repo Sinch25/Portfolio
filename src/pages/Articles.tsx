@@ -6,9 +6,9 @@ import { Home } from "lucide-react";
 const articles = [
   {
     id: "1",
-    title: "Neuroscience of Music",
-    date: "28/11/2024",
-    tag: "biology",
+    title: "Simplifying Hackathons",
+    date: "18/04/2025",
+    tag: "technology",
   },
   {
     id: "2",
@@ -18,12 +18,18 @@ const articles = [
   },
   {
     id: "3",
-    title: "Poster",
+    title: "Neuroscience of Music",
+    date: "28/11/2024",
+    tag: "biology",
+  },
+  {
+    id: "4",
+    title: "One with open skies, the other behind bars",
     date: "10/09/2021",
     tag: "literature",
   },
   {
-    id: "4",
+    id: "5",
     title: "The Times Front Page",
     date: "03/07/2021",
     tag: "history",
